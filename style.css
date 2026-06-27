@@ -66,18 +66,18 @@ body {
 }
 
 .mist-1 {
-    background: radial-gradient(ellipse at 20% 50%, rgba(212, 196, 160, 0.03) 0%, transparent 50%);
-    animation: mist-drift-1 25s ease-in-out infinite;
+    background: radial-gradient(ellipse at 20% 50%, rgba(212, 196, 160, 0.08) 0%, transparent 50%);
+    animation: mist-drift-1 25s ease-in-out infinite, mist-breathe 6s ease-in-out infinite;
 }
 
 .mist-2 {
-    background: radial-gradient(ellipse at 80% 80%, rgba(200, 120, 48, 0.02) 0%, transparent 60%);
-    animation: mist-drift-2 35s ease-in-out infinite;
+    background: radial-gradient(ellipse at 80% 80%, rgba(200, 120, 48, 0.06) 0%, transparent 60%);
+    animation: mist-drift-2 35s ease-in-out infinite, mist-breathe 8s ease-in-out infinite 1s;
 }
 
 .mist-3 {
-    background: linear-gradient(180deg, transparent 0%, rgba(42, 48, 64, 0.05) 50%, transparent 100%);
-    animation: mist-drift-3 45s ease-in-out infinite;
+    background: linear-gradient(180deg, transparent 0%, rgba(42, 48, 64, 0.1) 50%, transparent 100%);
+    animation: mist-drift-3 45s ease-in-out infinite, mist-breathe 7s ease-in-out infinite 0.5s;
 }
 
 @keyframes mist-drift-1 {
@@ -93,6 +93,24 @@ body {
 @keyframes mist-drift-3 {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(20px); }
+}
+
+@keyframes mist-breathe {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* ===== HERO VIGNETTE (DARKENED EDGES) ===== */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.4) 100%);
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* ===== AUDIO TOGGLE BUTTON ===== */
