@@ -307,19 +307,40 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 35%;
-    background: linear-gradient(to top, rgba(10, 10, 10, 0.8) 0%, transparent 100%);
-    animation: mist-rise 8s ease-in-out infinite;
+    height: 45%;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(26, 20, 16, 0.7) 30%, rgba(200, 120, 48, 0.15) 60%, transparent 100%);
+    animation: mist-rise 6s ease-in-out infinite;
+    z-index: 3;
+}
+
+.hero-mist::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(26, 20, 16, 0.4) 0%, transparent 80%);
+    animation: mist-rise-secondary 8s ease-in-out infinite;
 }
 
 @keyframes mist-rise {
     0%, 100% {
         transform: translateY(0);
-        opacity: 0.4;
+        opacity: 0.5;
     }
     50% {
-        transform: translateY(-20px);
-        opacity: 0.6;
+        transform: translateY(-30px);
+        opacity: 0.75;
+    }
+}
+
+@keyframes mist-rise-secondary {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
     }
 }
 
