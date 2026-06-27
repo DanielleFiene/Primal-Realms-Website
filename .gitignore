@@ -1,0 +1,32 @@
+# System & IDE
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# History & Temporary
+.history/
+.git/
+
+# Node (even though not used, for future-proofing)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS specifics
+*.log
+npm-debug.log*
