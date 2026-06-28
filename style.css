@@ -237,7 +237,7 @@ body {
     z-index: 3;
     animation: fade-in 1.8s ease-in-out;
     margin-top: -80px;
-    width: min(100%, 620px);
+  
     padding: 0 1.5rem;
 }
 
