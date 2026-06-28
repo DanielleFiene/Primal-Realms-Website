@@ -230,6 +230,8 @@ body {
     z-index: 3;
     animation: fade-in 1.8s ease-in-out;
     margin-top: -80px;
+    width: min(100%, 620px);
+    padding: 0 1.5rem;
 }
 
 @keyframes fade-in {
@@ -247,10 +249,11 @@ body {
     font-size: clamp(2.5rem, 12vw, 5.5rem);
     font-weight: 700;
     letter-spacing: 4px;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     color: var(--color-text);
     text-shadow: 0 0 40px rgba(200, 120, 48, 0.2);
     animation: title-glow 6s ease-in-out infinite;
+    max-width: 100%;
 }
 
 @keyframes title-glow {
@@ -271,6 +274,7 @@ body {
     letter-spacing: 1.5px;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 0.5rem;
     opacity: 0.85;
     animation: fade-in 2.2s ease-in-out 0.3s both;
 }
@@ -636,13 +640,23 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero-content {
+        width: 100%;
+        padding: 0 1rem;
+        margin-top: -30px;
+    }
+
     .title {
         letter-spacing: 2px;
+        font-size: clamp(2rem, 10vw, 2.8rem);
+        line-height: 1.2;
     }
 
     .subtitle {
         max-width: 100%;
-        font-size: 1rem;
+        font-size: 0.95rem;
+        padding: 0 0.25rem;
+        line-height: 1.6;
     }
 
     .audio-toggle {
